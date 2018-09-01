@@ -1,0 +1,2 @@
+# Share-This
+Piwigo plugin
