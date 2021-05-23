@@ -7,7 +7,6 @@ class sharethis_maintain extends PluginMaintain {
     'facebook'   => false,
     'pinterest'  => false,
     'twitter'    => false,
-    'googleplus' => false,
     'tumblr'     => false
   );
 
