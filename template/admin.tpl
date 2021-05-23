@@ -20,7 +20,6 @@
     <li><label><span class="graphicalCheckbox {if $INC_FACEBOOK}icon-check{else}icon-check-empty{/if}">&nbsp;</span><input name="inc_facebook" id="inc_facebook" type="checkbox" value="1" {if $INC_FACEBOOK}checked="checked"{/if}>{'Post to Facebook'|@translate}</label></li>
     <li><label><span class="graphicalCheckbox {if $INC_PINTEREST}icon-check{else}icon-check-empty{/if}">&nbsp;</span><input name="inc_pinterest" id="inc_pinterest" type="checkbox" value="1" {if $INC_PINTEREST}checked="checked"{/if}>{'Post to Pinterest'|@translate}</label></li>
     <li><label><span class="graphicalCheckbox {if $INC_TWITTER}icon-check{else}icon-check-empty{/if}">&nbsp;</span><input name="inc_twitter" id="inc_twitter" type="checkbox" value="1" {if $INC_TWITTER}checked="checked"{/if}>{'Post to Twitter'|@translate}</label></li>
-    <li><label><span class="graphicalCheckbox {if $INC_GOOGLEPLUS}icon-check{else}icon-check-empty{/if}">&nbsp;</span><input name="inc_googleplus" id="inc_googleplus" type="checkbox" value="1" {if $INC_GOOGLEPLUS}checked="checked"{/if}>{'Post to Google Plus'|@translate}</label></li>
     <li><label><span class="graphicalCheckbox {if $INC_TUMBLR}icon-check{else}icon-check-empty{/if}">&nbsp;</span><input name="inc_tumblr" id="inc_tumblr" type="checkbox" value="1" {if $INC_TUMBLR}checked="checked"{/if}>{'Post to Tumblr'|@translate}</label></li>
   </ul>
 </fieldset>
