@@ -18,7 +18,6 @@ if (isset($_POST['submit'])) {
     'facebook'   => !empty($_POST['inc_facebook']),
     'pinterest'  => !empty($_POST['inc_pinterest']),
     'twitter'    => !empty($_POST['inc_twitter']),
-    'googleplus' => !empty($_POST['inc_googleplus']),
     'tumblr'     => !empty($_POST['inc_tumblr'])
   );
 
@@ -50,7 +49,6 @@ $template->assign(array(
   'INC_FACEBOOK'      => isset($params['facebook']) && $params['facebook'],
   'INC_PINTEREST'     => isset($params['pinterest']) && $params['pinterest'],
   'INC_TWITTER'       => isset($params['twitter']) && $params['twitter'],
-  'INC_GOOGLEPLUS'    => isset($params['googleplus']) && $params['googleplus'],
   'INC_TUMBLR'        => isset($params['tumblr']) && $params['tumblr']
 
 ));
