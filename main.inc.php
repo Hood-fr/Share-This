@@ -46,7 +46,7 @@ function sharethis_init() {
 
   // prepare plugin configuration
   $conf['sharethis'] = safe_unserialize($conf['sharethis']);
-  if ($conf['sharethis']['facebook'] || $conf['sharethis']['pinterest'] || $conf['sharethis']['twitter'] || $conf['sharethis']['googleplus'] || $conf['sharethis']['tumblr']):
+  if ($conf['sharethis']['facebook'] || $conf['sharethis']['pinterest'] || $conf['sharethis']['twitter'] || $conf['sharethis']['tumblr']):
     add_event_handler('loc_begin_picture', 'sharethis_picture_handler');
   endif;                                                                                                                                    
 }
@@ -73,7 +73,6 @@ function sharethis_picture_handler()
       'sharethis_facebook'   => $conf['sharethis']['facebook'],
       'sharethis_pinterest'  => $conf['sharethis']['pinterest'],
       'sharethis_twitter'    => $conf['sharethis']['twitter'],
-      'sharethis_googleplus' => $conf['sharethis']['googleplus'],
       'sharethis_tumblr'     => $conf['sharethis']['tumblr'],
       'SHARETHIS_PATH'       => SHARETHIS_PATH,
       'CUR_PAGE'             => $curUrl
@@ -107,7 +106,6 @@ function sharethis_get_tab_metadata($metadata) {
                    . '{if $sharethis_facebook}<a href="http://www.facebook.com/sharer/sharer.php?p[url]=' . $url . '{if $current.selected_derivative}&amp;p[images][0]=' . $image . '{/if}&amp;p[summary]=' . $content . '" onclick="window.open(this.href, \'\', \'toolbar=0,status=0,width=700,height=500\'); return false;" title="{\'Share on Facebook\'|@translate}" target="_blank"><i class="fa fa-facebook-square"></i> <span>{\'Facebook\'|@translate}</span></a>{/if}'
                    . '{if $sharethis_pinterest}<a href="http://pinterest.com/pin/create/button/?url=' . $url . '&media=' . $image . '&description=' . $title . '" title="{\'Share on Pinterest\'|@translate}" target="_blank" data-pin-do="none" data-pin-config="none"><i class="fa fa-pinterest"></i> <span>{\'Pinterest\'|@translate}</span></a>{/if}'
                    . '{if $sharethis_twitter}<a href="https://twitter.com/intent/tweet?text=' . $title . '&url=' . $url .'" title="{\'Share on Twitter\'|@translate}" target="_blank"><i class="fa fa-twitter"></i> <span>{\'Twitter\'|@translate}</span></a>{/if}'
-                   . '{if $sharethis_googleplus}<a href="https://plus.google.com/share?url=' . $url . '" title="{\'Share on Google+\'|@translate}" target="_blank" onclick="javascript:window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><i class="fa fa-google-plus-square"></i> <span>{\'Google+\'|@translate}</span></a>{/if}'
                    . '{if $sharethis_tumblr}<a href="http://www.tumblr.com/share/photo?source=' . $image . '&caption=' . $title . '&click_thru=' . $url . '" title="{\'Share on Tumblr\'|@translate}" target="_blank"><i class="fa fa-tumblr"></i> <span>{\'Tumblr\'|@translate}</span></a>{/if}',
 
     "combine"     => '{combine_css id=\'fa\' path=$SHARETHIS_PATH|cat:"/css/font-awesome.min.css"}'                                                                                                            
